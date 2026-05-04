@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pyarrow
+pandas
+numpy
+python-multipart
+python-dotenv
+slowapi
+httpx
