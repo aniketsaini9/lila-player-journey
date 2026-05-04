@@ -40,20 +40,50 @@ A web-based tool for LILA Games Level Designers to explore player behavior acros
 ## Repository Structure
 
 ```
-python_backend/               ← Backend repo
-├── scripts/
-│   └── process.py            ← Data pipeline: parquet → JSON
-├── app/
-│   └── main.py               ← FastAPI server
-├── output/                   ← Generated JSON data files
-│   ├── events.json
-│   ├── matches.json
-│   └── summary.json
-├── minimaps/                 ← Minimap images served as static files
-│   ├── AmbroseValley_Minimap.png
-│   ├── GrandRift_Minimap.png
-│   └── Lockdown_Minimap.jpg
-└── requirements.txt
+assignment_python_backend/
+|-- main.py
+|-- .env.example
+|-- requirements.txt
+|-- constants/
+|   `-- __init__.py
+|-- controllers/
+|   |-- __init__.py
+|   |-- health_controller.py
+|   `-- telemetry_controller.py
+|-- database/
+|   |-- __init__.py
+|   `-- database.py
+|-- middlewares/
+|   |-- __init__.py
+|   |-- authenticator_middleware.py
+|   |-- exception_handler.py
+|   |-- exceptions.py
+|   `-- logger_middleware.py
+|-- models/
+|   |-- __init__.py
+|   `-- telemetry_model.py
+|-- repositories/
+|   |-- __init__.py
+|   `-- telemetry_repository.py
+|-- routes/
+|   |-- __init__.py
+|   |-- health_routes.py
+|   `-- telemetry_routes.py
+|-- services/
+|   |-- __init__.py
+|   |-- health_services.py
+|   `-- telemetry_services.py
+|-- utils/
+|   |-- __init__.py
+|   |-- helpers.py
+|   |-- rate_limiter_middleware.py
+|   `-- router_config.py
+|-- scripts/
+|   |-- main.py
+|   `-- process.py
+|-- output/
+`-- minimaps/
+
 
 Lila_frontend_assignment/     ← Frontend repo
 ├── src/
